@@ -1,21 +1,43 @@
 import { Pizza } from "./Pizza";
+import { PizzaType } from "./enums";
 
 export class PizzaStore {
 
   constructor(){}
 
-  public orderNYPizza(): Pizza {
+  public orderNYPizza(type: PizzaType): Pizza {
     let pizza = new Pizza();
-    pizza.name = 'Cheese pizza';
-    pizza.price = 1;
     pizza.type = 'NY';
+    switch (type) {
+      case PizzaType.CHEESE: {
+        pizza.name = 'Cheese pizza';
+        pizza.price = 1;
+        break;
+      }
+      case PizzaType.MEAT: {
+        pizza.name = 'Meat pizza';
+        pizza.price = 1;
+        break;
+      }
+    }
     return pizza;
   }
 
-  public orderChicagoPizza(): Pizza {
+  public orderChicagoPizza(type: PizzaType): Pizza {
     let pizza = new Pizza();
-    pizza.name = 'Cheese pizza';
-    pizza.price = 1;
     pizza.type = 'Chicago';
-    return pizza;  }
+    switch (type) {
+      case PizzaType.CHEESE: {
+        pizza.name = 'Cheese pizza';
+        pizza.price = 1;
+        break;
+      }
+      case PizzaType.MEAT: {
+        pizza.name = 'Meat pizza';
+        pizza.price = 1;
+        break;
+      }
+    }
+    return pizza;
+  }
 }
