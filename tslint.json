@@ -40,19 +40,19 @@
       true,
       {
         "order": [
-          "public-static-field",
-          "protected-static-field",
           "private-static-field",
-          "public-static-method",
-          "protected-static-method",
-          "private-static-method",
-          "public-instance-field",
-          "protected-instance-field",
+          "protected-static-field",
+          "public-static-field",
           "private-instance-field",
+          "protected-instance-field",
+          "public-instance-field",
           "constructor",
-          "public-instance-method",
+          "private-static-method",
+          "protected-static-method",
+          "public-static-method",
+          "private-instance-method",
           "protected-instance-method",
-          "private-instance-method"
+          "public-instance-method",
         ]
       }
     ],
