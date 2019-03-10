@@ -19,5 +19,5 @@ print(pizza);
 
 
 function print(p: Pizza): void {
-  console.log(`${p.name} - type : ${p.type}`);
+  console.log(JSON.stringify(p));
 }

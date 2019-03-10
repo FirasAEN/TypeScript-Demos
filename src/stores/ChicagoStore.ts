@@ -12,11 +12,17 @@ export class ChicagoStore extends PizzaStore {
       case PizzaType.CHEESE: {
         pizza.name = 'cheese pizza';
         pizza.price = 1;
+        pizza.cheese = 'chicago cheese';
+        pizza.meat = 'no meat';
+        pizza.vegetables = [];
         break;
       }
       case PizzaType.MEAT: {
         pizza.name = 'meat pizza';
         pizza.price = 1;
+        pizza.cheese = 'no cheese';
+        pizza.meat = 'chicago meat';
+        pizza.vegetables = [];
         break;
       }
     }
