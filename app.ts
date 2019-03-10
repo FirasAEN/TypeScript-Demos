@@ -1,14 +1,20 @@
-import { PizzaStore } from "./src/PizzaStore";
+import { PizzaStore } from "./src/stores/PizzaStore";
 import { Pizza } from './src/Pizza';
 import { PizzaType } from "./src/enums";
+import { NYStore } from "./src/stores/NYStore";
+import { ChicagoStore } from "./src/stores/ChicagoStore";
 
 
-const store = new PizzaStore();
-const nyPizza = store.orderNYPizza(PizzaType.CHEESE);
-print(nyPizza);
+let store: PizzaStore;
+let pizza: Pizza;
 
-const chicagoPizza = store.orderChicagoPizza(PizzaType.MEAT);
-print(chicagoPizza);
+store = new NYStore();
+pizza = store.orderPizza(PizzaType.CHEESE);
+print(pizza);
+
+store = new ChicagoStore();
+pizza = store.orderPizza(PizzaType.MEAT);
+print(pizza);
 
 
 
