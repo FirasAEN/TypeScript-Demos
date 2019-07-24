@@ -10,6 +10,6 @@ export class PizzaStore {
   }
 
   public orderPizza(type: PizzaType): Pizza {
-    return this.factory.createPizza(type);
+    return this.factory.create(type);
   }
 }
